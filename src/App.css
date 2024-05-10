@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, #9d50bb, #6e48aa);
+  font-family: "Lato", sans-serif;
+}
+body,
+.quiz-app,
+.next-button,
+.questions-num,
+.answers,
+.again,
+.correct-answers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quiz-app {
+  width: 35vw;
+  height: fit-content;
+  padding: 20px 0;
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.quiz {
+  width: 90%;
+  height: 90%;
+}
+.quiz-title,
+.quiz-app-answers-title {
+  border-bottom: 2px solid;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.question {
+  font-size: 18px;
+}
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.choice {
+  background-color: transparent;
+  border: 1px solid;
+  display: flex;
+  padding: 0 8px;
+  cursor: pointer;
+}
+.choice:hover,
+.choice:focus {
+  background-color: #6e48aa;
+  color: white;
+}
+.choice,
+.next-button button,
+.s-a div,
+.again {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+.next-button button,
+.again {
+  margin: 12px 0;
+  background-color: #6e48aa;
+  border: none;
+  color: white;
+  &:hover {
+    background-color: #6a38ba;
+  }
+}
+
+.answers {
+  width: 50vw;
+  height: fit-content;
+  overflow: scroll;
+  max-height: 80vh;
+  padding: 12px 0;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  align-items: start;
+}
+.q-a {
+  width: 95%;
+  height: 100%;
+}
+.single-answer {
+  padding: 4px 0;
+}
+.s-a div {
+  cursor: default;
+  height: fit-content;
+}
+.s-a .s {
+  width: 95%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.correct {
+  color: green;
+  font-size: 22px;
+}
+.wrong {
+  color: red;
+  font-size: 26px;
+}
+.s div {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1280px) {
+  .quiz-app {
+    width: 50vw;
+  }
+  .answers {
+    width: 80vw;
+  }
+}
+@media only screen and (max-width: 860px) {
+  .quiz-app {
+    width: 80vw;
+  }
+  .answers {
+    width: 90vw;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .quiz-app {
+    width: 90vw;
+  }
+  .choice p {
+    font-size: 14px;
+  }
+  .answers {
+    width: 98vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .quiz-app {
+    width: 98vw;
+  }
+}
